@@ -65,3 +65,40 @@ footer {
     font-style: italic;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Lägger till textskugga */
 }
+
+.content {
+    max-width: 800px; /* Begränsar bredden till 800px */
+    margin: 0 auto; /* Centrerar innehållet på sidan */
+    padding: 20px; /* Lägger till inre marginaler för bättre läsbarhet */
+    background-color: #ffffff; /* Vit bakgrund för tydlighet */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtil skugga för djup */
+    border-radius: 8px; /* Rundar hörnen */
+}
+
+/* För inbäddade kodblock */
+code {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95em;
+}
+
+/* För kodblock med flera rader */
+pre {
+    background-color: #282c34;
+    color: #abb2bf;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto; /* Gör kodblock scrollbara horisontellt */
+    line-height: 1.5;
+    font-size: 0.95em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gör syntaxen tydligare */
+pre code {
+    color: #abb2bf;
+}
