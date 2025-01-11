@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Welcome to Krikas-Sec
 
 ## About Us
