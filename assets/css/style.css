@@ -123,6 +123,34 @@ code span.function {
     color: #c586c0; /* Lila för funktioner */
 }
 
+.code-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #005f73;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copy-btn:hover {
+    background-color: #0a9396;
+}
+
+.copy-btn:active {
+    background-color: #94d2bd;
+}
+
+
 
 /* Gör footern fixerad längst ner på sidan */
 footer {
