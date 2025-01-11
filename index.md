@@ -1,9 +1,12 @@
-#Welcome to Krikas-Sec
+# Welcome to Krikas-Sec
 
-# Krikas-Sec Projects
+## About Us
+Krikas-Sec develops open-source tools and utilities focused on system administration, security, and more.
 
-Welcome to the central hub for Krikas-Sec projects. Below are links to our repositories:
+## Our Projects
+Here are some of our key projects:
+- [PortHawk](https://github.com/Krikas-Sec/PortHawk): A lightweight and fast port scanner.
+- [APT Repository](https://Krikas-Sec.github.io/apt-repo): A repository hosting Debian packages for our tools.
 
-- [APT Repository for PortHawk](https://krikas-sec.github.io/apt-repo)
-- [PortHawk Project](https://github.com/Krikas-Sec/PortHawk)
-- [Other Cool Tool](https://github.com/Krikas-Sec/OtherCoolTool)
+## Get in Touch
+Have questions or want to contribute? Reach out to us at [krikas@temphack.org](mailto:krikas@temphack.org) or visit our [GitHub profile](https://github.com/Krikas-Sec).
