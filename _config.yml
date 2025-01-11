@@ -1,0 +1,8 @@
+title: Krikas-Sec
+description: Open-source tools and repositories by Krikas-Sec.
+remote_theme: mmistakes/minimal-mistakes
+
+header_pages:
+  - index.md
+  - about.md
+  - projects.md
