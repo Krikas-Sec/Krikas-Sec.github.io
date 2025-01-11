@@ -1,8 +1,3 @@
----
-layout: home
-title: [Welcome to Krikas-Sec]
----
-
 # Welcome to Krikas-Sec
 
 ## About Us
