@@ -77,8 +77,8 @@ footer {
 
 /* För inbäddade kodsnuttar */
 code {
-    background-color: #f5f5f5;
-    color: #212529; /* Tydligare textfärg */
+    background-color: #1e1e1e;
+    color: #d9e7f5; /* Tydligare textfärg */
     padding: 2px 4px;
     border-radius: 4px;
     font-family: 'Fira Code', 'Courier New', monospace;
