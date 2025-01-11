@@ -1,3 +1,9 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
 # Our Projects
 
 ## [PortHawk](https://github.com/Krikas-Sec/PortHawk)

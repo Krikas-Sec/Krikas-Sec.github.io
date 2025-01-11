@@ -1,3 +1,9 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
 # About Krikas-Sec
 
 ## Who We Are

@@ -2,6 +2,9 @@ title: Krikas-Sec
 description: Open-source tools and repositories by Krikas-Sec.
 remote_theme: mmistakes/minimal-mistakes
 
+plugins:
+  - jekyll-remote-theme
+
 header_pages:
   - index.md
   - about.md
