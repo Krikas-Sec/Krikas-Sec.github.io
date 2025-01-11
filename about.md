@@ -1,18 +1,21 @@
 ---
 layout: default
 ---
+# About Me
 
-# About Krikas-Sec
+## Who I Am
+My name is **Krikas**, and I’m the sole developer behind Krikas-Sec. With over 10 years of experience as a system administrator, I am passionate about building open-source tools that simplify workflows, enhance productivity, and empower individuals in the fields of system administration and security.
 
-## Who We Are
-Krikas-Sec is dedicated to creating free and open-source tools for system administrators, penetration testers, and security enthusiasts.
+## My Mission
+My mission is to create tools that are simple, efficient, and accessible to everyone. Whether it's helping system administrators automate tasks or giving penetration testers tools to enhance their work, I strive to make a meaningful impact in the tech community.
 
-## Our Mission
-To empower users with tools that simplify tasks and improve productivity, while fostering a collaborative open-source community.
+## My Journey
+I started Krikas-Sec as a way to share my knowledge and learn new skills along the way. From programming in languages like Python, Go, and Java to delving into ethical hacking, this journey is as much about self-improvement as it is about giving back to the community.
 
-## Meet the Founder
-**Krikas**  
-- 10+ years experience in system administration  
-- Passionate about security, programming, and teaching others  
+## Get in Touch
+If you'd like to collaborate, have suggestions, or just want to chat, feel free to reach out to me:
 
-Learn more about our projects on [GitHub](https://github.com/Krikas-Sec).
+- **Email:** [krikas@temphack.org](mailto:krikas@temphack.org)
+- **GitHub:** [Krikas-Sec](https://github.com/Krikas-Sec)
+
+Thank you for visiting Krikas-Sec and supporting my journey!
