@@ -11,4 +11,4 @@ A lightweight port scanner built in Go. PortHawk is fast, efficient, and perfect
 Host and manage Debian packages for tools like PortHawk. Add the repository to your system with a single command.
 
 ## More Tools Coming Soon!
-We are constantly working on new tools to make life easier for sysadmins and security enthusiasts. Stay tuned!
+I'am constantly working on new tools to make life easier for sysadmins and security enthusiasts. Stay tuned!
