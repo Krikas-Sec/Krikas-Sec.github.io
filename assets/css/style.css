@@ -75,33 +75,54 @@ footer {
     border-radius: 8px; /* Rundar hörnen */
 }
 
-/* För inbäddade kodblock */
+/* För inbäddade kodsnuttar */
 code {
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 2px 5px;
-    border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.95em;
+    background-color: #f5f5f5;
+    color: #212529; /* Tydligare textfärg */
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 1em;
 }
 
-/* För kodblock med flera rader */
+/* För fler-radiga kodblock */
 pre {
-    background-color: #282c34;
-    color: #abb2bf;
+    background-color: #1e1e1e; /* Mörk bakgrund för bättre kontrast */
+    color: #d4d4d4; /* Ljus textfärg för tydlighet */
     padding: 15px;
-    border-radius: 8px;
-    font-family: 'Courier New', Courier, monospace;
-    overflow-x: auto; /* Gör kodblock scrollbara horisontellt */
+    border-radius: 6px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 1em;
     line-height: 1.5;
-    font-size: 0.95em;
+    overflow-x: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #333; /* Ger en subtil kant för definition */
 }
 
-/* Gör syntaxen tydligare */
+/* Syntaxmarkering */
 pre code {
-    color: #abb2bf;
+    color: #d4d4d4; /* Grundläggande textfärg */
 }
+
+/* Nyckelord och variabler */
+code span.keyword {
+    color: #569cd6; /* Blått för nyckelord */
+    font-weight: bold;
+}
+
+code span.string {
+    color: #d69d85; /* Ljusrött för strängar */
+}
+
+code span.comment {
+    color: #6a9955; /* Grönt för kommentarer */
+    font-style: italic;
+}
+
+code span.function {
+    color: #c586c0; /* Lila för funktioner */
+}
+
 
 /* Gör footern fixerad längst ner på sidan */
 footer {
