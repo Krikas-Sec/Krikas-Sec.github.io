@@ -102,3 +102,21 @@ pre {
 pre code {
     color: #abb2bf;
 }
+
+/* Gör footern fixerad längst ner på sidan */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #005f73; /* Justera färg efter behov */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 10; /* Säkerställ att footern ligger ovanpå */
+}
+
+/* Lägg till marginal i botten av innehållet */
+body {
+    margin-bottom: 50px; /* Skapar utrymme för footern */
+}
