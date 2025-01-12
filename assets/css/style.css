@@ -110,14 +110,29 @@ pre code {
 
 /* Header för kodboxen */
 .code-header {
-    background-color: #282c34; /* Mörk header för kontrast */
+    background-color: #282c34;
     color: #ffffff;
     font-size: 0.9em;
     padding: 8px 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Gör att knappen placeras till höger */
     align-items: center;
     border-bottom: 1px solid #444;
+}
+
+/* Kopieringsknappen i headern */
+.copy-btn {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.copy-btn:hover {
+    color: #0a9396;
+    transform: scale(1.1);
 }
 
 /* Om det inte finns något språk */
@@ -149,21 +164,8 @@ code span.function {
     margin-bottom: 20px;
 }
 
-/* Placera ikonen ovanför kodboxen */
-/* Kopieringsknappen i headern */
-.copy-btn {
-    background-color: transparent;
-    border: none;
-    color: #ffffff;
-    font-size: 1em;
-    cursor: pointer;
-    transition: transform 0.2s ease, color 0.3s ease;
-}
 
-.copy-btn:hover {
-    color: #0a9396;
-    transform: scale(1.1);
-}
+
 /* För att säkerställa att fyrkanten inte visas */
 .copy-btn:focus {
     outline: none; /* Ta bort kant vid fokus */
