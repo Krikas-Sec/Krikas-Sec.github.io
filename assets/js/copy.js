@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Hitta alla kodblock
     const codeBlocks = document.querySelectorAll("pre");
 
     codeBlocks.forEach((codeBlock) => {
@@ -7,10 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const container = document.createElement("div");
         container.className = "code-container";
 
-        // Skapa kopieringsknappen
+        // Skapa kopieringsikonen
         const button = document.createElement("button");
         button.className = "copy-btn";
-        button.textContent = "Copy";
+        button.innerHTML = '<i class="fas fa-copy"></i>'; // Lägg till Font Awesome-ikon
 
         // Lägg till knappens kopieringsfunktion
         button.addEventListener("click", () => {
@@ -18,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Kopiera koden till urklipp
             navigator.clipboard.writeText(code).then(() => {
-                button.textContent = "Copied!";
-                setTimeout(() => (button.textContent = "Copy"), 2000);
+                button.innerHTML = '<i class="fas fa-check"></i>'; // Ändra till check-ikon
+                setTimeout(() => (button.innerHTML = '<i class="fas fa-copy"></i>'), 2000);
             });
         });
 
