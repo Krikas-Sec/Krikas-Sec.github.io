@@ -128,24 +128,28 @@ code span.function {
     margin-bottom: 20px;
 }
 
+/* Placera ikonen ovanför kodboxen */
 .copy-btn {
     position: absolute;
-    top: -10px; /* Flytta knappen ovanför kodboxen */
-    right: 10px; /* Placera knappen till höger */
+    top: -20px; /* Flytta upp ikonen ytterligare */
+    right: 10px; /* Placera till höger */
     background-color: transparent; /* Ingen bakgrundsfärg */
     border: none; /* Ingen kant */
-    color: #005f73; /* Färg för ikonen */
+    color: #005f73; /* Standardikonfärg */
     font-size: 1.5em; /* Gör ikonen större */
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: transform 0.2s ease, color 0.3s ease; /* Lägg till hover-effekt */
 }
 
+/* Ändra färg och skala ikonen vid hover */
 .copy-btn:hover {
-    color: #0a9396; /* Ändra färg vid hover */
+    color: #0a9396; /* Turkos färg vid hover */
+    transform: scale(1.2); /* Förstora ikonen något vid hover */
 }
 
-.copy-btn:hover {
-    background-color: #0a9396;
+/* För att säkerställa att fyrkanten inte visas */
+.copy-btn:focus {
+    outline: none; /* Ta bort kant vid fokus */
 }
 
 .copy-btn:active {
