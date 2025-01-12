@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
+}
 /* Navigation */
 .navigation {
     background: linear-gradient(135deg, #003f5c, #2f4b7c); /* Mörkare gradient för navigation */
@@ -201,18 +202,6 @@ code span.function {
     background-color: #94d2bd;
 }
 
-/* Gör footern fixerad längst ner på sidan */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #005f73; /* Justera färg efter behov */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 10; /* Säkerställ att footern ligger ovanpå */
-}
 
 /* Lägg till marginal i botten av innehållet */
 body {
