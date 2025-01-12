@@ -33,10 +33,6 @@ body {
     color: #94d2bd; /* Ljusare färg vid hover */
 }
 
-/* Main content padding */
-main {
-    padding: 20px;
-}
 
 /* Banner */
 .banner {
@@ -67,10 +63,21 @@ footer {
     background: linear-gradient(135deg, #2f4b7c, #1e1e1e); /* Gradient för foten */
     color: white;
     border-top: 2px solid #003f5c; /* Liten kant för separation */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     font-size: 0.9em;
+    position: relative; /* Ändrad från fixed till relative */
+    width: 100%;
+}
+
+/* Gör att footern inte överlappar */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Sidan fyller hela höjden */
+}
+
+main {
+    flex: 1; /* Huvudinnehållet tar upp tillgängligt utrymme */
+    padding: 20px;
 }
 
 /* Optional: Add a hover effect for footer links if any */
