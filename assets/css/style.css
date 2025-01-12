@@ -65,7 +65,6 @@ footer {
     font-style: italic;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Lägger till textskugga */
 }
-
 .content {
     max-width: 800px; /* Begränsar bredden till 800px */
     margin: 0 auto; /* Centrerar innehållet på sidan */
@@ -85,23 +84,40 @@ code {
     font-size: 1em;
 }
 
-/* För fler-radiga kodblock */
 pre {
-    background-color: #1e1e1e; /* Mörk bakgrund för bättre kontrast */
-    color: #d4d4d4; /* Ljus textfärg för tydlighet */
+    background-color: #1e1e1e;
+    color: #d4d4d4;
     padding: 15px;
-    border-radius: 6px;
     font-family: 'Fira Code', 'Courier New', monospace;
-    font-size: 1em;
     line-height: 1.5;
     overflow-x: auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #333; /* Ger en subtil kant för definition */
+    margin: 0; /* Ta bort marginal under kodblock */
 }
 
 /* Syntaxmarkering */
 pre code {
     color: #d4d4d4; /* Grundläggande textfärg */
+}
+
+/* Container för kodboxen */
+.code-container {
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #333; /* Lägg till en subtil ram */
+    border-radius: 6px;
+    overflow: hidden; /* Håll allt inom containern */
+}
+
+/* Header för kodboxen */
+.code-header {
+    background-color: #282c34; /* Mörk header för kontrast */
+    color: #ffffff;
+    font-size: 0.9em;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
 }
 
 /* Nyckelord och variabler */
@@ -129,25 +145,20 @@ code span.function {
 }
 
 /* Placera ikonen ovanför kodboxen */
+/* Kopieringsknappen i headern */
 .copy-btn {
-    position: absolute;
-    top: 8px; /* Justera för att passa insidan av kodboxen */
-    right: 10px; /* Placera nära kodboxens högra kant */
-    background-color: transparent; /* Ingen bakgrundsfärg */
-    border: none; /* Ingen kant */
-    color: #ffffff; /* Gör knappen vit för bättre synlighet */
-    font-size: 1.2em; /* Gör ikonen medelstor */
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1em;
     cursor: pointer;
-    z-index: 2; /* Prioritera knappen över kodboxen */
     transition: transform 0.2s ease, color 0.3s ease;
 }
 
-/* Hover-effekt */
 .copy-btn:hover {
-    color: #0a9396; /* Färgen ändras vid hover */
-    transform: scale(1.1); /* Förstora ikonen något */
+    color: #0a9396;
+    transform: scale(1.1);
 }
-
 /* För att säkerställa att fyrkanten inte visas */
 .copy-btn:focus {
     outline: none; /* Ta bort kant vid fokus */
@@ -156,8 +167,6 @@ code span.function {
 .copy-btn:active {
     background-color: #94d2bd;
 }
-
-
 
 /* Gör footern fixerad längst ner på sidan */
 footer {
