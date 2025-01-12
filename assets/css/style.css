@@ -57,6 +57,7 @@ body {
 }
 
 /* Footer */
+f/* Footer placeras längst ner */
 footer {
     text-align: center;
     padding: 15px;
@@ -64,8 +65,8 @@ footer {
     color: white;
     border-top: 2px solid #003f5c; /* Liten kant för separation */
     font-size: 0.9em;
-    position: relative; /* Ändrad från fixed till relative */
-    width: 100%;
+    width: 100%; /* Säkerställ att foten sträcker sig över hela sidan */
+    margin-top: auto; /* Lägger footern längst ner */
 }
 
 /* Gör att footern inte överlappar */
