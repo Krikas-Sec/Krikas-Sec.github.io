@@ -72,12 +72,6 @@ footer {
     z-index: 10; /* Säkerställ att footern ligger ovanpå */
 }
 
-/* Gör att footern inte överlappar */
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Sidan fyller hela höjden */
-}
 
 main {
     flex: 1; /* Huvudinnehållet tar upp tillgängligt utrymme */
