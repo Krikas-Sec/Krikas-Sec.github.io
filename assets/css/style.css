@@ -131,20 +131,21 @@ code span.function {
 /* Placera ikonen ovanför kodboxen */
 .copy-btn {
     position: absolute;
-    top: -20px; /* Flytta upp ikonen ytterligare */
-    right: 10px; /* Placera till höger */
+    top: 8px; /* Justera för att passa insidan av kodboxen */
+    right: 10px; /* Placera nära kodboxens högra kant */
     background-color: transparent; /* Ingen bakgrundsfärg */
     border: none; /* Ingen kant */
-    color: #005f73; /* Standardikonfärg */
-    font-size: 1.5em; /* Gör ikonen större */
+    color: #ffffff; /* Gör knappen vit för bättre synlighet */
+    font-size: 1.2em; /* Gör ikonen medelstor */
     cursor: pointer;
-    transition: transform 0.2s ease, color 0.3s ease; /* Lägg till hover-effekt */
+    z-index: 2; /* Prioritera knappen över kodboxen */
+    transition: transform 0.2s ease, color 0.3s ease;
 }
 
-/* Ändra färg och skala ikonen vid hover */
+/* Hover-effekt */
 .copy-btn:hover {
-    color: #0a9396; /* Turkos färg vid hover */
-    transform: scale(1.2); /* Förstora ikonen något vid hover */
+    color: #0a9396; /* Färgen ändras vid hover */
+    transform: scale(1.1); /* Förstora ikonen något */
 }
 
 /* För att säkerställa att fyrkanten inte visas */
