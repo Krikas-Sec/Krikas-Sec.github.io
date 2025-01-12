@@ -9,16 +9,23 @@ document.addEventListener("DOMContentLoaded", () => {
         // Skapa en header för kodboxen
         const header = document.createElement("div");
         header.className = "code-header";
-        header.textContent = "Copy code"; // Du kan ändra texten här
+
+        // Hämta språk från <code>-klass (ex: "language-bash")
+        const codeElement = codeBlock.querySelector("code");
+        const languageClass = codeElement.className.match(/language-(\w+)/);
+        const language = languageClass ? languageClass[1] : ""; // Exempel: "bash" eller tomt
+
+        // Sätt texten i headern
+        header.textContent = language ? language : ""; // Visa språk eller lämna tomt
 
         // Skapa kopieringsikonen
         const button = document.createElement("button");
         button.className = "copy-btn";
-        button.innerHTML = '<i class="fas fa-copy"></i>'; // Lägg till Font Awesome-ikon
+        button.innerHTML = '<i class="fas fa-copy"></i>'; // Kopieringsikon
 
         // Lägg till kopieringsfunktion till knappen
         button.addEventListener("click", () => {
-            const code = codeBlock.querySelector("code").textContent;
+            const code = codeElement.textContent;
 
             // Kopiera koden till urklipp
             navigator.clipboard.writeText(code).then(() => {
