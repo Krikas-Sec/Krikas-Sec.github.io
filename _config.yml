@@ -1,5 +1,32 @@
 title: Krikas-Sec
-description: Open-source tools and repositories by Krikas-Sec.
+description: CTF Writeups and Open-source tools and repositories by Krikas-Sec.
 show_downloads: false
-google_analytics:
-theme: jekyll-theme-cayman
+theme: jekyll-theme-chirpy
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+url: "https://krikas-sec.github.io"
+baseurl: ""
+
+theme_mode: dark  # or light / auto
+
+# Profile info in sidebar
+profile:
+  avatar: /assets/img/avatar.png
+  name: Krikas
+  bio: Ethical Hacker | Sysadmin | CTF Addict
+
+# Social links
+social:
+  email: krikas@temphack.org
+  github: Krikas-Sec
+  website: https://temphack.org
+
+# Page routes
+paginate: 5
+paginate_path: /page:num/
+
+# Optional site settings
+lang: en
+timezone: Europe/Stockholm

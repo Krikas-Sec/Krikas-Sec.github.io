@@ -6,50 +6,76 @@ permalink: /projects/
 
 # My Projects
 
-Welcome to the Projects page! Below, you'll find the tools and utilities I’ve developed as part of the Krikas-Sec initiative. These projects are designed to assist sysadmins and security enthusiasts in their work. Explore each tool and find links to the respective repositories.
+Welcome to the Projects page! Below you'll find tools and writeups created under the **Krikas-Sec** and **PowerHack** initiative—where we focus on Windows-first hacking using PowerShell and WSL. These open-source projects aim to help sysadmins, security enthusiasts, and ethical hackers improve their workflows and sharpen their skills.
 
 ---
 
-## **PortHawk**
+## 💻 **PowerHack — Hacking From Windows**
+[PowerShell Scripts by Krikas-Sec](https://github.com/Krikas-Sec/PowerShell-Scripts)  
+PowerHack is a curated collection of PowerShell scripts and utilities developed specifically for hacking **from Windows**. These tools allow you to:
+
+- Perform reconnaissance, fuzzing, and enumeration from a Windows environment.
+- Integrate PowerShell with WSL and Linux-style hacking workflows.
+- Run automated tasks, generate reports, and use REST APIs—all inside PowerShell.
+
+**Ideal For:** Windows pentesters, sysadmins learning security, bug bounty hunters.
+
+---
+
+## 🚀 **PortHawk**
 [PortHawk](https://github.com/Krikas-Sec/PortHawk)  
-A lightweight, fast, and concurrent port scanning tool written in Go. PortHawk is designed for efficiency and speed, allowing you to scan open ports on an IP address or DNS name. Features include:
+A lightweight, fast, and concurrent port scanning tool written in Go. Features include:
+
 - Customizable port ranges.
-- Concurrent scanning with a routine limit.  
-**APT Support:** You can install PortHawk via the Krikas-Sec APT repository for easy deployment.
+- Concurrent scanning with a goroutine limit.
 
-*Development Status:*  
-The current development branch includes experimental features and is under active improvement.  
+**APT Support:** Install PortHawk via the Krikas-Sec APT repository for easy deployment.
+
+*Development Status:* Actively maintained with experimental features in progress.
 
 ---
 
-## **HTTP Header Analyzer**
+## 🌐 **HTTP Header Analyzer**
 [HTTP Header Analyzer](https://github.com/Krikas-Sec/http-header-analyzer)  
-A simple Python tool to analyze HTTP headers for common security issues. This tool provides insights into header configurations and flags potential security vulnerabilities, making it a valuable resource for web developers and penetration testers.
+Analyze HTTP headers for misconfigurations and missing security headers. Great for:
+
+- Web developers checking security posture.
+- Pentesters performing reconnaissance.
 
 ---
 
-## **IP Range Scanner**
+## 🔍 **IP Range Scanner**
 [IP Range Scanner](https://github.com/Krikas-Sec/ip-range-scanner)  
-A simple Bash script to scan an IP range for active hosts. It’s perfect for network administrators and security professionals looking to quickly identify active devices in their network.  
+A Bash script that scans an IP range for active hosts. Lightweight and no dependencies required.
 
-Features:
-- Lightweight and straightforward.
-- No external dependencies required.
+- Quickly discover devices on local networks.
+- Useful for network mapping and validation.
 
 ---
 
-## **APT Repository**
+## 📦 **APT Repository**
 [APT Repository](https://github.com/Krikas-Sec/apt-repo)  
-Host and manage Debian packages for tools like PortHawk. The Krikas-Sec APT repository allows you to easily install and update tools using standard APT commands.
+A Debian package repository for hosting Krikas-Sec tools like PortHawk.
 
-To add the repository to your Debian-based system:
+**Quick Setup:**
 ```bash
 echo "deb [trusted=yes] https://krikas-sec.github.io/apt-repo stable main" | sudo tee -a /etc/apt/sources.list
 sudo apt update
 sudo apt install porthawk
 ```
 
-# **More Tools Coming Soon!**
-I’m constantly working on new tools to simplify workflows for sysadmins and security professionals. Stay tuned for updates and additions to the Krikas-Sec project portfolio.
+---
 
-**Feel free to explore and contribute** to any of these projects via their respective GitHub repositories. For feedback, suggestions, or collaboration, don’t hesitate to reach out!
+## 📁 **Writeups**
+Alongside tools, I publish CTF walkthroughs and hacking writeups as part of the **PowerHack** initiative.
+
+- 💀 Practical hacking examples.
+- 🔐 Real-world TryHackMe and lab challenges.
+- ⚡ Windows-first solutions using PowerShell.
+
+🧭 **[Explore Categories »](/categories)** to browse all writeups by type.
+
+---
+
+## 🛠️ **More Tools Coming Soon!**
+I’m constantly building and experimenting. More PowerShell scripts, CTF tools, and automation utilities are in the works. Stay tuned—and feel free to [contribute on GitHub](https://github.com/Krikas-Sec)!

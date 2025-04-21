@@ -1,13 +1,127 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Fira Code', monospace;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    margin-bottom: 50px;
 }
-/* Navigation */
+
+/* Post Grid Layout */
+.post-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Post Card Flex with Image Left, Text Right */
+.post-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    background-color: #161b22;
+    color: #c9d1d9;
+}
+
+.thumbnail {
+    flex: 0 0 40%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 200px;
+}
+
+.post-info {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .post-card {
+        flex-direction: column;
+    }
+    .thumbnail {
+        width: 100%;
+        min-height: 200px;
+    }
+}
+
+.post-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+}
+
+.post-info h3 {
+    margin: 0;
+    font-size: 1.6em;
+    color: #39ff14;
+    text-shadow: 0 0 5px #39ff14;
+}
+
+.post-info p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #c9d1d9;
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.post-tags span {
+    background-color: #21262d;
+    color: #00ffcc;
+    padding: 4px 8px;
+    font-size: 0.75em;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+/* ...rest of your CSS remains unchanged */
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+  .category-block h2 a {
+    color: #00ffcc;
+    text-shadow: 0 0 5px #00ffcc;
+    text-decoration: none;
+  }
+  .category-block h2 a:hover {
+    color: #39ff14;
+  }
+  .category-block ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .category-block li {
+    margin-bottom: 5px;
+  }
+
+/* Navigation Bar */
 .navigation {
-    background: linear-gradient(135deg, #003f5c, #2f4b7c); /* Mörkare gradient för navigation */
+    background: linear-gradient(135deg, #000000, #0a0a0a);
     padding: 10px;
 }
 
@@ -24,86 +138,121 @@ body {
 
 .navigation a {
     text-decoration: none;
-    color: white;
+    color: #39ff14;
     font-weight: bold;
     font-size: 1em;
 }
 
 .navigation a:hover {
     text-decoration: underline;
-    color: #94d2bd; /* Ljusare färg vid hover */
+    color: #00ffcc;
 }
 
-
-/* Banner */
+/* Hero Banner with Glitch Animation */
 .banner {
     text-align: center;
-    background: linear-gradient(135deg, #1e1e1e, #3a3a3a, #5a5a5a); /* Mörkare banner med grå gradient */
-    color: white;
-    padding: 60px 10px; /* Ökad höjd */
-    border-bottom: 5px solid #003f5c; /* Mörkare kant */
+    background: radial-gradient(circle, #000000, #1a1a1a);
+    color: #39ff14;
+    padding: 60px 10px;
+    border-bottom: 5px solid #39ff14;
+    animation: glitch-bg 4s infinite linear alternate;
+}
+
+@keyframes glitch-bg {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
 }
 
 .banner h1 {
     margin: 0;
     font-size: 3em;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Mer distinkt textskugga */
+    text-shadow: 0 0 5px #39ff14, 0 0 10px #00ffcc;
+    position: relative;
 }
 
 .banner p {
     margin: 10px 0 0;
     font-size: 1.5em;
     font-style: italic;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 0 3px #00ffcc;
 }
 
-/* Footer */
-/* Footer placeras längst ner */
+/* Terminal Prompt Style for Headers */
+h1, h2, h3 {
+    font-family: 'Fira Code', monospace;
+    color: #39ff14;
+    position: relative;
+}
+
+h1::before, h2::before, h3::before {
+    content: "$ ";
+    color: #00ffcc;
+}
+
+/* Neon Button */
+button, .btn {
+    background-color: transparent;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    padding: 8px 20px;
+    font-family: 'Fira Code', monospace;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #39ff14;
+}
+
+button:hover, .btn:hover {
+    background-color: #00ffcc;
+    color: #000;
+    box-shadow: 0 0 15px #00ffcc, 0 0 30px #39ff14;
+}
+
+/* Footer Styling */
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(135deg, #2f4b7c, #1e1e1e); /* Gradient för foten */
-    color: white;
-    border-top: 2px solid #003f5c; /* Liten kant för separation */
+    background: #0a0a0a;
+    color: #39ff14;
+    border-top: 2px solid #00ffcc;
     text-align: center;
     padding: 10px 0;
-    z-index: 10; /* Säkerställ att footern ligger ovanpå */
+    z-index: 10;
 }
 
-
-main {
-    flex: 1; /* Huvudinnehållet tar upp tillgängligt utrymme */
-    padding: 20px;
-}
-
-/* Optional: Add a hover effect for footer links if any */
 footer a {
-    color: #94d2bd;
+    color: #00ffcc;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
-    color: #0a9396; /* Matchande hover-effekt */
-}
-.content {
-    max-width: 800px; /* Begränsar bredden till 800px */
-    margin: 0 auto; /* Centrerar innehållet på sidan */
-    padding: 20px; /* Lägger till inre marginaler för bättre läsbarhet */
-    background-color: #ffffff; /* Vit bakgrund för tydlighet */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtil skugga för djup */
-    border-radius: 8px; /* Rundar hörnen */
+    color: #39ff14;
 }
 
-/* För inbäddade kodsnuttar */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #161b22;
+    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.1);
+    border-radius: 8px;
+    color: #c9d1d9;
+}
+
 code {
     background-color: #1e1e1e;
-    color: #d9e7f5; /* Tydligare textfärg */
+    color: #39ff14;
     padding: 2px 4px;
     border-radius: 4px;
-    font-family: 'Fira Code', 'Courier New', monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 1em;
 }
 
@@ -111,95 +260,92 @@ pre {
     background-color: #1e1e1e;
     color: #d4d4d4;
     padding: 15px;
-    font-family: 'Fira Code', 'Courier New', monospace;
+    font-family: 'Fira Code', monospace;
     line-height: 1.5;
     overflow-x: auto;
-    margin: 0; /* Ta bort marginal under kodblock */
+    margin: 0;
 }
 
-/* Syntaxmarkering */
 pre code {
-    color: #d4d4d4; /* Grundläggande textfärg */
+    color: #d4d4d4;
 }
 
-/* Container för kodboxen */
 .code-container {
     position: relative;
     margin-bottom: 20px;
-    border: 1px solid #333; /* Lägg till en subtil ram */
+    border: 1px solid #444;
     border-radius: 6px;
-    overflow: hidden; /* Håll allt inom containern */
+    overflow: hidden;
 }
 
-/* Header för kodboxen */
 .code-header {
-    background-color: #282c34;
-    color: #ffffff;
+    background-color: #0d1117;
+    color: #00ffcc;
     font-size: 0.9em;
     padding: 8px 15px;
     display: flex;
-    justify-content: space-between; /* Gör att knappen placeras till höger */
+    justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #39ff14;
 }
 
-/* Kopieringsknappen i headern */
 .copy-btn {
     background-color: transparent;
     border: none;
-    color: #ffffff;
+    color: #00ffcc;
     font-size: 1em;
     cursor: pointer;
     transition: transform 0.2s ease, color 0.3s ease;
 }
 
 .copy-btn:hover {
-    color: #0a9396;
+    color: #39ff14;
     transform: scale(1.1);
 }
 
-/* Om det inte finns något språk */
 .code-header:empty {
-    padding: 8px 15px; /* Justera padding för en tom header */
+    padding: 8px 15px;
 }
 
-/* Nyckelord och variabler */
 code span.keyword {
-    color: #569cd6; /* Blått för nyckelord */
+    color: #00ffff;
     font-weight: bold;
 }
 
 code span.string {
-    color: #d69d85; /* Ljusrött för strängar */
+    color: #ff9d00;
 }
 
 code span.comment {
-    color: #6a9955; /* Grönt för kommentarer */
+    color: #6a9955;
     font-style: italic;
 }
 
 code span.function {
-    color: #c586c0; /* Lila för funktioner */
+    color: #c586c0;
 }
 
-.code-container {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-
-
-/* För att säkerställa att fyrkanten inte visas */
 .copy-btn:focus {
-    outline: none; /* Ta bort kant vid fokus */
+    outline: none;
 }
 
 .copy-btn:active {
-    background-color: #94d2bd;
+    background-color: #00ffcc;
 }
 
+a {
+    color: #00bfff;
+    text-decoration: underline;
+}
 
-/* Lägg till marginal i botten av innehållet */
-body {
-    margin-bottom: 50px; /* Skapar utrymme för footern */
+a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
 }

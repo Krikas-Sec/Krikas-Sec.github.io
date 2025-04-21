@@ -1,0 +1,11 @@
+# Ignore Bundler files and local builds
+_site/
+.bundle/
+.jekyll-cache/
+Gemfile.lock
+.sass-cache/
+.jekyll-metadata
+
+# Ignore posts templates
+_posts/post-template.md
+

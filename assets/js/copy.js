@@ -1,46 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const codeWrappers = document.querySelectorAll("div[class*='language-']");
+    const codeBlocks = document.querySelectorAll("div.highlighter-rouge");
 
-    codeWrappers.forEach((wrapper) => {
-        // Hämta språket från klassnamnet (ex: "language-bash")
-        const languageClass = wrapper.className.match(/language-(\w+)/);
-        const language = languageClass ? languageClass[1] : "";
+    codeBlocks.forEach((block) => {
+        const pre = block.querySelector("pre");
+        const code = block.querySelector("code");
 
-        // Skapa en container för hela kodboxen
+        // Detect language from div or code tag
+        let language = "";
+        const divLangMatch = block.className.match(/language-(\w+)/);
+        const codeLangMatch = code.className.match(/language-(\w+)/);
+        if (divLangMatch) language = divLangMatch[1];
+        else if (codeLangMatch) language = codeLangMatch[1];
+
+        // Create container
         const container = document.createElement("div");
         container.className = "code-container";
 
-        // Skapa en header för kodboxen
+        // Create header
         const header = document.createElement("div");
         header.className = "code-header";
-        header.textContent = language || ""; // Sätt språk eller lämna tomt
+        header.textContent = language;
 
-        // Skapa kopieringsikonen
+        // Copy button
         const button = document.createElement("button");
         button.className = "copy-btn";
         button.innerHTML = '<i class="fas fa-copy"></i>';
 
-        // Lägg till kopieringsfunktion till knappen
+        // Copy function
         button.addEventListener("click", () => {
-            const codeBlock = wrapper.querySelector("code");
-            const code = codeBlock.textContent;
-
-            // Kopiera koden till urklipp
-            navigator.clipboard.writeText(code).then(() => {
+            navigator.clipboard.writeText(code.textContent).then(() => {
                 button.innerHTML = '<i class="fas fa-check"></i>';
-                setTimeout(() => (button.innerHTML = '<i class="fas fa-copy"></i>'), 2000);
+                setTimeout(() => {
+                    button.innerHTML = '<i class="fas fa-copy"></i>';
+                }, 2000);
             });
         });
 
-        // Lägg till knappen i headern
         header.appendChild(button);
 
-        // Flytta Rouge-wrappern in i containern
-        const highlight = wrapper.querySelector(".highlight");
+        // Move the original content
+        const highlightWrapper = block.querySelector("div.highlight");
         container.appendChild(header);
-        container.appendChild(highlight);
+        container.appendChild(highlightWrapper);
 
-        // Ersätt original-wrappern med containern
-        wrapper.parentNode.replaceChild(container, wrapper);
+        block.parentNode.replaceChild(container, block);
     });
 });
