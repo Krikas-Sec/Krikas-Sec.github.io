@@ -97,6 +97,18 @@ body {
 
 /* ...rest of your CSS remains unchanged */
 
+.post-featured-image {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .post-featured-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,255,204,0.15);
+  }
+
 .category-list {
     display: flex;
     flex-direction: column;
