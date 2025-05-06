@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Light - TryHackMe Walkthrough"
-date: 2025-04-27
+date: 2025-05-06
 categories: [writeup]
 tags: [TryHackMe, CTF, PowerHack, Windows, PowerShell, Enumeration, ReverseShell]
 image: /assets/img/Light/Light.png
